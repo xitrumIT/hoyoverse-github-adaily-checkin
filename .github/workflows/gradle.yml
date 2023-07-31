@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
   # Run job on 16:15UTC/00:15CST daily
   schedule:
-  - cron: "15 16 * * *"
+  - cron: "0 0 * * *"
   
 permissions:
   contents: read
@@ -36,5 +36,13 @@ jobs:
       with:
         arguments: build test
       env:
-        USER_1_ID: ${{ secrets.MY_TOKEN_ID }}
-        USER_1_TOKEN: ${{ secrets.MY_TOKEN }}
+        CHOWWY_ID: ${{ secrets.CHOWWY_ID }}
+        CHOWWY_TOKEN: ${{ secrets.CHOWWY_TOKEN }}
+        T_DAT_ID: ${{ secrets.T_DAT_ID }}
+        T_DAT_TOKEN: ${{ secrets.T_DAT_TOKEN }}
+        TEI_ID: ${{ secrets.TEI_ID }}
+        TEI_TOKEN: ${{ secrets.TEI_TOKEN }}
+        RIN_ID: ${{ secrets.RIN_ID }}
+        RIN_TOKEN: ${{ secrets.RIN_TOKEN }}
+        GRU_ID: ${{ secrets.GRU_ID }}
+        GRU_TOKEN: ${{ secrets.GRU_TOKEN }}
